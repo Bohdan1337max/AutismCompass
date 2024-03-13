@@ -7,4 +7,5 @@ public interface IQuizRepository
     Quiz? GetQuiz(int quizId);
     Result? GetQuizResult(int quizId, UserTestResult userTestResult);
     Task SendQuizResultToUser(UserQuizResult userResult);
+    Quiz CreateNewQuiz();
 }

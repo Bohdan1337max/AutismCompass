@@ -14,6 +14,8 @@ public class AutismDbContext : DbContext
     public DbSet<Answer> Answers { get; set; }
     public DbSet<Result> Results { get; set; }
     public DbSet<UserQuizResult> UserQuizResults { get; set; }
+    
+    public DbSet<User> Users { get; set; }
 
     public AutismDbContext(DbContextOptions<AutismDbContext> options) :
         base(options)

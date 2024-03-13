@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProjectAutism.Data.Models;
 using ProjectAutism.Repos;
@@ -54,6 +55,14 @@ public class QuizController : ControllerBase
         {
             return NotFound("Problem with send" + e);
         }
+    }
+
+    [HttpPost("add-quiz")]
+    [Authorize]
+    public IActionResult CreateNewQuiz()
+    {
+        _quizRepository.CreateNewQuiz();
+        return Ok();
     }
     
 }

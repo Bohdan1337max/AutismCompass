@@ -80,6 +80,11 @@ public class QuizRepository : IQuizRepository
         await _mailHandler.SendMessage(mailMessage);
     }
 
+    public Quiz CreateNewQuiz()
+    {
+        return new Quiz() { Name = "Test" };
+    }
+
     private static string BuildBody(UserQuizResult userQuizResult)
     {
         var body = new StringBuilder();
