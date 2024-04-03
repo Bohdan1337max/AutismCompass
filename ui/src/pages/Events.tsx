@@ -1,5 +1,5 @@
 import React, {  useEffect, useRef, useState } from 'react';
-import { HeadingSection, EventsCardList, EventInfo } from '../components';
+import {HeadingSection, EventsCardList, EventInfo, SupportForm} from '../components';
 import { EventType } from '../types/types';
 import { scrollToSection } from '../consts/consts';
 
@@ -52,6 +52,7 @@ const Events: React.FC = () => {
         clickedEvent={clickedEvent}
         eventInfoRef={eventInfoRef}
       />}
+      <SupportForm/>
     </>
   );
 };

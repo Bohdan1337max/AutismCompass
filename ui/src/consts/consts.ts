@@ -17,6 +17,8 @@ export const NAVIGATIONS = [
   },
   { name: 'Wydarzenia', path: '/events' },
   { name: 'Test diagnozujący', path: '/test' },
+  { name: 'Login', path: '/login'},
+  { name:'Register', path: '/register'}
 ];
 
 export const DESCRIPTION = [

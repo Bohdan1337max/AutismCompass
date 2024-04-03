@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { HeadingSection, TestAbout, TestQuestionsList, TestResult, TestSkeleton } from '../components';
+import {HeadingSection, SupportForm, TestAbout, TestQuestionsList, TestResult, TestSkeleton} from '../components';
 import { scrollToSection } from '../consts/consts';
 import { QuestionType, UserResult } from '../types/types';
 
@@ -29,6 +29,7 @@ const Test: React.FC = () => {
       <TestAbout eventSectionRef={testSectionRef}/>
       { quiz !== null && !isLoading ? <TestQuestionsList setIsResult={setIsResult} quiz={quiz} setUserResult={setUserResult}/> : <TestSkeleton/>}
       {isResult && userResult && <TestResult quizName={quiz?.name} userResult={userResult}/>}
+      <SupportForm/>
     </>
   );
 };

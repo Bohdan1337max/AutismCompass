@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import './pages.scss';
-import { SupportAdvices, VideoSection, SupportTabs, HeadingSection } from '../components';
+import {SupportAdvices, VideoSection, SupportTabs, HeadingSection, SupportForm} from '../components';
 import { scrollToSection } from '../consts/consts';
 
 const Support: React.FC = () => {
@@ -11,6 +11,7 @@ const Support: React.FC = () => {
       <VideoSection eventSectionRef={supportSectionRef}/>
       <SupportTabs />
       <SupportAdvices />
+      <SupportForm/>
     </>
   );
 };

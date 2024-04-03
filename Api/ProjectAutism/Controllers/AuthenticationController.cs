@@ -13,9 +13,9 @@ public class AuthenticationController : ControllerBase
         _authenticationRepository = authenticationRepository;
     }
     [HttpPost("register")]
-    public IActionResult RegisterNewUser(string email, string password)
+    public IActionResult RegisterNewUser([FromBody]CreateNewUserModel newUserModel)
     {
-        var jwt = _authenticationRepository.RegisterNewUser(email, password);
+        var jwt = _authenticationRepository.RegisterNewUser(newUserModel.Email, newUserModel.Password);
         if (jwt == null)
         {
             return BadRequest("User already exist");
